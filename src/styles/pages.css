@@ -1,0 +1,313 @@
+/* ===== Faixa eSocial (Home) ===== */
+.esocial-strip__head {
+  background: var(--bg-soft);
+  padding: 40px 0 28px;
+}
+
+.esocial-strip__head h2 {
+  text-align: center;
+  font-size: clamp(1.5rem, 3.4vw, 2.4rem);
+  margin: 0;
+}
+
+.esocial-strip__body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 24px;
+}
+
+.esocial-strip__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: var(--green-800);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.esocial-strip__badge svg {
+  font-size: 3rem;
+  color: var(--orange-500);
+}
+
+/* ===== Cards de serviços ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(11, 42, 25, 0.16);
+}
+
+.card h3 {
+  font-size: 1.35rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+.card__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: var(--green-100);
+  color: var(--green-800);
+  font-size: 1.6rem;
+}
+
+.card__more {
+  margin-top: auto;
+  padding-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange-600);
+  font-weight: 600;
+}
+
+/* Cards sobrepostos à borda do banner (Gestão Integrada) */
+.overlap-cards {
+  position: relative;
+  margin-top: -110px;
+  z-index: 2;
+}
+
+/* ===== Chamada para ação ===== */
+.cta {
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+  max-width: 820px;
+  margin: 0 auto 12px;
+}
+
+.cta p {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--heading);
+  margin-bottom: 28px;
+}
+
+/* ===== Blocos de texto + lista ===== */
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.split h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.panel {
+  background: var(--bg-soft);
+  border-left: 4px solid var(--orange-500);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+.panel h3 {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+}
+
+/* ===== Recursos com ícone redondo (Gestão Integrada) ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.feature__icon {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  border: 5px solid var(--green-800);
+  border-radius: 50%;
+  color: var(--green-800);
+  font-size: 3rem;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+}
+
+.feature p {
+  color: var(--text-muted);
+}
+
+/* ===== Contato ===== */
+.contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 56px;
+}
+
+.contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+}
+
+.contact__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  padding: 32px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  font: inherit;
+  color: var(--text);
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 2px solid var(--green-600);
+  outline-offset: 0;
+  background: #fff;
+}
+
+.form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form__note {
+  font-size: 0.9rem;
+  color: var(--green-800);
+  margin: 0;
+}
+
+.map {
+  min-height: 360px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 39px, var(--border) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, var(--border) 39px 40px),
+    var(--bg-soft);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 24px;
+}
+
+.map--live {
+  display: block;
+  padding: 0;
+  background: var(--bg-soft);
+}
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+}
+
+.map svg {
+  font-size: 2.4rem;
+  color: var(--orange-500);
+  margin: 0 auto 8px;
+}
+
+.contact__info h3 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.contact__info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 22px;
+}
+
+.contact__info li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.contact__info svg {
+  flex-shrink: 0;
+  margin-top: 5px;
+  color: var(--orange-500);
+}
+
+.contact__info a {
+  text-decoration: none;
+}
+
+.contact__info a:hover {
+  color: var(--orange-600);
+}
+
+/* ===== Página não encontrada ===== */
+.notfound {
+  text-align: center;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 960px) {
+  .split,
+  .contact {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 720px) {
+  .esocial-strip__body,
+  .contact__box {
+    grid-template-columns: 1fr;
+  }
+  .overlap-cards {
+    margin-top: -80px;
+  }
+}

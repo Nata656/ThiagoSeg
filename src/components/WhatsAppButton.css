@@ -1,0 +1,80 @@
+.whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+/* Balão escondido; aparece ao passar o mouse (ou focar com o teclado) */
+.whatsapp__bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 260px;
+  padding: 10px 16px;
+  background: #fff;
+  color: #333;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  pointer-events: none;
+}
+
+.whatsapp__bubble strong {
+  color: var(--green-800);
+}
+
+.whatsapp:hover .whatsapp__bubble,
+.whatsapp:focus-visible .whatsapp__bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.whatsapp__bubble::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background: #fff;
+}
+
+.whatsapp__icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 2rem;
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+  transition: transform 0.2s;
+}
+
+.whatsapp:hover .whatsapp__icon {
+  transform: scale(1.08);
+}
+
+@media (max-width: 640px) {
+  .whatsapp {
+    right: 16px;
+    bottom: 16px;
+  }
+  .whatsapp__bubble {
+    display: none;
+  }
+}

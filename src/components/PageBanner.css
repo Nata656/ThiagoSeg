@@ -1,0 +1,70 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 460px;
+  padding: 130px 0 70px;
+  color: #fff;
+  /* Fundo padrão enquanto não houver foto */
+  background:
+    radial-gradient(circle at 85% 20%, rgba(249, 115, 22, 0.22), transparent 45%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0 2px, transparent 2px 22px),
+    linear-gradient(135deg, var(--green-950), var(--green-800));
+  overflow: hidden;
+}
+
+/* Com foto: a foto fica embaixo de uma camada verde escura */
+.banner--photo {
+  background:
+    linear-gradient(rgba(11, 42, 25, 0.78), rgba(11, 42, 25, 0.7)),
+    var(--banner-image) center / cover no-repeat;
+}
+
+.banner--tall {
+  min-height: 560px;
+}
+
+.banner--overlap {
+  padding-bottom: 150px;
+}
+
+.banner__content {
+  position: relative;
+  max-width: var(--container);
+}
+
+.banner__content > * {
+  max-width: 660px;
+}
+
+.banner__title {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  margin-bottom: 20px;
+}
+
+.banner__subtitle {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  margin-bottom: 16px;
+}
+
+.banner__text {
+  font-style: italic;
+  font-size: 1.05rem;
+  opacity: 0.92;
+}
+
+@media (max-width: 640px) {
+  .banner {
+    min-height: 380px;
+    padding: 120px 0 56px;
+  }
+  .banner--tall {
+    min-height: 460px;
+  }
+  .banner--overlap {
+    padding-bottom: 120px;
+  }
+}
