@@ -5,12 +5,14 @@ import './PageBanner.css'
  * - title: título grande
  * - subtitle: linha em negrito abaixo do título (opcional)
  * - text: texto em itálico (opcional)
- * - image: foto de fundo, ex.: '/images/home.jpg' (opcional)
+ * - image: foto de fundo dentro de /public, ex.: 'images/home.jpg' (opcional)
  * - tall: banner mais alto (usado na Home)
  * - overlap: deixa espaço para cards "sobrepostos" à borda de baixo
  */
 export default function PageBanner({ title, subtitle, text, image, tall, overlap, children }) {
-  const style = image ? { '--banner-image': `url(${image})` } : undefined
+  // Ajusta o caminho para funcionar tanto na raiz quanto em /ThiagoSeg/ (GitHub Pages)
+  const src = image && !/^https?:/.test(image) ? import.meta.env.BASE_URL + image.replace(/^\//, '') : image
+  const style = src ? { '--banner-image': `url("${src}")` } : undefined
 
   return (
     <section

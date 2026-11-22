@@ -1,7 +1,7 @@
 import { site } from '../data/site'
 
 // Logo provisório (escudo + nome). Quando tiver o logo oficial, troque por:
-// <img src="/images/logo.svg" alt={site.name} className="logo__img" />
+// <img src={`${import.meta.env.BASE_URL}images/logo.svg`} alt={site.name} className="logo__img" />
 export default function Logo({ showTagline = false }) {
   return (
     <span className="logo">

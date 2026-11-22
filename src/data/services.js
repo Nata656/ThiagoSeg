@@ -1,5 +1,5 @@
 // Conteúdo das páginas de Serviços. Textos provisórios — substituir pelos definitivos.
-// `image`: caminho de uma foto em /public/images (ex.: '/images/nr12.jpg'). null = fundo padrão.
+// `image`: caminho de uma foto em /public/images (ex.: 'images/nr12.jpg'). null = fundo padrão.
 
 export const services = [
   {

@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <PageBanner
         tall
-        image={null /* ex.: '/images/home.jpg' */}
+        image={null /* ex.: 'images/home.jpg' */}
         title="Segurança do Trabalho e Saúde Ocupacional"
         subtitle="Gestão para pequenas, médias e grandes empresas"
         text="Elaboração de PGR, GRO, eSocial, PPP, LTCAT, Laudos de Insalubridade e Periculosidade, CIPA, NR-12, Treinamentos de Segurança e Assistência Técnica em Perícias."

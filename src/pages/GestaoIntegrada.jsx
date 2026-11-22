@@ -39,7 +39,7 @@ export default function GestaoIntegrada() {
     <>
       <PageBanner
         overlap
-        image={null /* ex.: '/images/gestao.jpg' */}
+        image={null /* ex.: 'images/gestao.jpg' */}
         title="Gestão Integrada em SST."
         text="Integração entre Segurança do Trabalho e Saúde Ocupacional, aumentando a produtividade e otimizando tempo."
       />

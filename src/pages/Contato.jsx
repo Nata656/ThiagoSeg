@@ -17,7 +17,7 @@ export default function Contato() {
   return (
     <>
       <PageBanner
-        image={null /* ex.: '/images/contato.jpg' */}
+        image={null /* ex.: 'images/contato.jpg' */}
         title="Atendimento."
         text={`Atendemos em todo o território nacional – tel.: ${site.phone}, e-mail: ${site.email}.`}
       />

@@ -24,7 +24,7 @@ export default function QuemSomos() {
   return (
     <>
       <PageBanner
-        image={null /* ex.: '/images/quem-somos.jpg' */}
+        image={null /* ex.: 'images/quem-somos.jpg' */}
         title="Quem Somos."
         text="Compromisso com a segurança, a saúde e a vida de quem trabalha."
       />
